@@ -86,3 +86,71 @@ function zipQuery () {
         })
 }
 document.getElementById("submit").addEventListener("click", zipQuery);  // make click event to submit a zip code that will be used as the initial search parameter
+
+
+function sunQuery () {
+    var latEl = document.getElementById("latitude").textContent;
+    var latQuery = JSON.parse(latEl);
+    //console.log(latQuery);
+    var lonEl = document.getElementById("longitude").textContent;
+    var lonQuery = JSON.parse(lonEl);
+    //console.log(lonQuery);
+    var apiTwoUrl = 'https://api.sunrisesunset.io/';
+    var apiTwoRequest = apiTwoUrl + "json?" + "lat=" + latQuery + "&" + "lng=" + lonQuery + "&" + "timezone=CST" + "&" + "date=today";
+        localStorage.setItem("apiTwoQuery", apiTwoRequest);
+        console.log(apiTwoRequest);
+
+    fetch(apiTwoRequest)
+        .then(response => {
+            //console.log(response);  // logs the response from the 2nd api server  status 200 etc....
+            return response.json();  // requesting the information stream to be converted from json input and produced into a javascript object
+        })
+        .then(dataTwoReturned => { // when the data returns as an object run this function
+            localStorage.setItem("apiTwo", JSON.stringify(dataTwoReturned));
+            console.log(dataTwoReturned);
+            
+            var {results: {timezone} } = dataTwoReturned; // returns the value of the nested key {timezone}, assigns the value to html #timezone
+            var timeZoneVar = (timezone);
+            localStorage.setItem("timezone", timeZoneVar);
+            //console.log(timeZoneVar);
+            document.getElementById("timezone").textContent = timeZoneVar;
+
+            var {results: {dawn} } = dataTwoReturned;  // returns the value of the nested key {dawn}, assigns the value to html #dawn
+            var dawnVar = (dawn);
+            localStorage.setItem("dawn", dawnVar);
+            //console.log(dawnVar);
+            document.getElementById("dawn").textContent = dawnVar;
+
+            var {results: {sunrise} } = dataTwoReturned;  // returns the value of the nested key {sunrise}, assigns the value to html #sunrise
+            var sunRiseVar = (sunrise);
+            localStorage.setItem("sunrise", sunRiseVar);
+            //console.log(sunRiseVar);
+            document.getElementById("sunrise").textContent = sunRiseVar;
+
+            var {results: {solar_noon} } = dataTwoReturned;  // returns the value of the nested key {solar_noon}, assigns the value to html #solarNoon
+            var solarNoonVar = (solar_noon);
+            localStorage.setItem("solarNoon", solarNoonVar);
+            //console.log(dayLengthVar);
+            document.getElementById("solarNoon").textContent = solarNoonVar;
+
+            var {results: {sunset} } = dataTwoReturned;  // returns the value of the nested key {sunset}, assigns the value to html #sunset
+            var sunsetVar = (sunset);
+            localStorage.setItem("sunset", sunsetVar);
+            //console.log(sunsetVar);
+            document.getElementById("sunset").textContent = sunsetVar;
+
+            var {results: {dusk} } = dataTwoReturned;  // returns the value of the nested key {dusk}, assigns the value to html #dusk
+            var duskVar = (dusk);
+            localStorage.setItem("dusk", duskVar);
+            //console.log(sunsetVar);
+            document.getElementById("dusk").textContent = duskVar;
+
+            var {results: {day_length} } = dataTwoReturned;  // returns the value of the nested key {day_length}, assigns the value to html #dayLength
+            var dayLengthVar = (day_length);
+            localStorage.setItem("day_length", dayLengthVar);
+            //console.log(dayLengthVar);
+            document.getElementById("dayLength").textContent = dayLengthVar;
+        })
+}
+document.getElementById("getSun").addEventListener("click", sunQuery);  //  create a click event so that once a zip code is selected, you can now view the times of the sun's events for the day
+

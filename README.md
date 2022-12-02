@@ -1,13 +1,8 @@
-# <Your-Project-Title>
+# Sunset Calculator
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+We built this webpage in order to create a quick and easy way for a user to access what time the sun will be setting in their area. We realized that most people guess at what time the sun will be setting and this webpage will solve tat issue. All it takes is entering a zip code and a user will get location information and the specific time they can catch a sunset.
 
 ## Table of Contents (Optional)
 
@@ -34,11 +29,20 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Caleb Davidson
+https://github.com/calebgdavidson
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+James Kelly
+https://github.com/jk377y
 
-If you followed tutorials, include links to those here as well.
+Matthew Wessman
+https://github.com/JimblesMw
+
+Sam O'Cain
+https://github.com/samocain93
+
+Geneveve Perez
+https://github.com/genrp24
 
 ## License
 

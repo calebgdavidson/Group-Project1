@@ -85,3 +85,33 @@ button {
     display: none;
 }
 /* end of modal styling */
+
+body {
+    background-color: gray;
+}
+
+#postal {
+    background-color: white;
+    height: 300px;
+    border: 5px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#sun {
+    background-color: white;
+    height: 300px;
+    border: 5px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#submit, #getSun {
+    width: 6rem;
+    height: 2rem;
+    border: 2px solid black;
+    margin: 10px;
+    width: fit-content;
+}

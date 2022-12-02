@@ -2,30 +2,39 @@
 
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Group 5 Project</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Group 5 Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     </head>
 <body>
 
-    <div id="postal">
-        <ul>
-            <li id="zipCode">Lorem ipsum dolor sit amet.</li>
-            <li id="city">Lorem ipsum dolor sit amet.</li>
-            <li id="state">Lorem ipsum dolor sit amet.</li>
-            <li id="latitude">Lorem ipsum dolor sit amet.</li>
-            <li id="longitude">Lorem ipsum dolor sit amet.</li>
-        </ul>
+<section class="modal hidden">
+    <div class="flex">
+        <button class="btn-close">⨉</button>
     </div>
+<div>
 
+<h3>enter your zipcode</h3>
+</div>       
+<input type="zipcode" id="zipcode" placeholder="" />
+<button class="btn">Submit</button>
+</section>      
+<div class="overlay hidden"></div>
+<button class="btn btn-open">Open Modal</button>
 
-    <div>
-        <input id="textInput" type="text" name="placeholder">
-        <button id="submit">push me</button>
-    </div>
+<div id="postal">
+    <ul>
+        <li id="zipCode">Lorem ipsum dolor sit amet.</li>
+        <li id="city">Lorem ipsum dolor sit amet.</li>
+        <li id="state">Lorem ipsum dolor sit amet.</li>
+        <li id="latitude">Lorem ipsum dolor sit amet.</li>
+        <li id="longitude">Lorem ipsum dolor sit amet.</li>
+    </ul>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

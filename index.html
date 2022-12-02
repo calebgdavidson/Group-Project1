@@ -1,6 +1,7 @@
 <DOCTYPE html>
   <html>
     <head>
+
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Group 5 Project</title>
@@ -11,6 +12,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
       />
       <link rel="stylesheet" href="styles.css" />
+
     </head>
     <body>
         <section class="hero is-primary">
@@ -39,23 +41,50 @@
           </div>
         </div>
       
+<section class="modal hidden">
+  
+  <div class="flex">
+      <button class="btn-close">⨉</button>
+  </div>
 
-    <div id="sun" >
+  <div>
+      <h3>enter your zipcode</h3>
+  </div>       
+  
+  <input type="zipcode" id="zipcode" placeholder="" />
+  
+  <button class="btn">Submit</button>
+
+</section>      
+
+<div class="overlay hidden"></div>
+
+<button class="btn btn-open">Open Modal</button>
+
+     <div id="postal">
+        <ul>
+            <li id="zipCode">Lorem ipsum dolor sit amet.</li>
+            <li id="city">Lorem ipsum dolor sit amet.</li>
+            <li id="state">Lorem ipsum dolor sit amet.</li>
+            <li id="latitude">Lorem ipsum dolor sit amet.</li>
+            <li id="longitude">Lorem ipsum dolor sit amet.</li>
+        </ul>
+     </div>
+
+     <div id="sun" >
         <ul>
             <li id="sunrise">Lorem ipsum dolor sit amet.</li>
             <li id="sunset">Lorem ipsum dolor sit amet.</li>
             <li id="dayLength">Lorem ipsum dolor sit amet.</li>
         </ul>
-    </div>
- 
-    <form>
+     </div>
+     <form>
         <input type="text" id="textInput" minLength="5" maxLength="5" placeholder="Enter Zip Code"/>
         <input type="button" id="submit" value="SUBMIT">
         <input type="button" id="getSun" value="TODAY'S SUN STATS">
         <button onClick="window.location.href=window.location.href">Restart App</button>
-   </form>   
-</div>
-
+    </form>   
       <script src="script.js"></script>
-    </body></html
-></DOCTYPE>
+  </body>
+</html
+

@@ -20,9 +20,8 @@
                 <h1 class="title">Group 5 Project</h1>
             </div>
         </section>
-      <div class="container">
-        <div class="columns">
-          <div id="postal" class="column">
+      
+          <div id="postal" class="columns container ">
             <ul>
               <li>ZIP CODE:   <span id="zipCode"></span></li>
               <li>CITY:   <span id="city"></span></li>
@@ -32,7 +31,7 @@
             </ul>
           </div>
 
-          <div id="sun" class="column">
+          <div id="sun" class="columns">
             <ul>
               <li>TIMEZONE:     <span id="timezone"></span></li>
               <li>DAWN:     <span id="dawn"></span></li>
@@ -43,7 +42,6 @@
               <li>DAY LENGTH:     <span id="dayLength"></span></li>
             </ul>
           </div>
-        </div>
       
 <section class="modal hidden">
   
@@ -64,24 +62,7 @@
 <div class="overlay hidden"></div>
 
 <button class="btn btn-open">Open Modal</button>
-
-     <div id="postal">
-        <ul>
-            <li id="zipCode">Lorem ipsum dolor sit amet.</li>
-            <li id="city">Lorem ipsum dolor sit amet.</li>
-            <li id="state">Lorem ipsum dolor sit amet.</li>
-            <li id="latitude">Lorem ipsum dolor sit amet.</li>
-            <li id="longitude">Lorem ipsum dolor sit amet.</li>
-        </ul>
-     </div>
-
-     <div id="sun" >
-        <ul>
-            <li id="sunrise">Lorem ipsum dolor sit amet.</li>
-            <li id="sunset">Lorem ipsum dolor sit amet.</li>
-            <li id="dayLength">Lorem ipsum dolor sit amet.</li>
-        </ul>
-     </div>
+     
      <form>
         <input type="text" id="textInput" minLength="5" maxLength="5" placeholder="Enter Zip Code"/>
         <input type="button" id="submit" value="SUBMIT">

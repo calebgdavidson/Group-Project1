@@ -1,46 +1,27 @@
-// modal 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
 
-// close modal function
-const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
+// modal visibility functions
+const overLay = document.querySelector("#overlay");
+var submitClick = document.querySelector("#submit");
+document.querySelector("#show-modal-btn").addEventListener("click", () => {
+  overLay.style.display = "block";
+});
+document.querySelector("#close-modal-btn").addEventListener("click", () => {
+  overLay.style.display = "none";
 
-// close the modal when the close button and overlay is clicked
-closeModalBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
-
-// close modal when the Esc key is pressed
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
+});
+document.querySelector("#submit").addEventListener("click", () => {
+  overLay.style.display = "none";
 });
 
-// open modal function
-const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-// open modal event
-openModalBtn.addEventListener("click", openModal);
-// end of modal code
 
-//================================================================
-
-// TODO:  LETS GET STARTED //
-
+// first api url set as variable
 var apiOneUrl = 'https://api.zippopotam.us/us/';
 function zipQuery () {
-    // creating vars to take the input from the zip code input box, and adding that to the url for setting the query search on apiOne
-    // the input from the zip code input box is set in the #zip code inner.HTML
+    // creating variables to take the input from the zip code input box, and adding that to the url for setting the query search parameters on apiOne
+    // the input from the zip code input box is also set in the #zipCode inner.HTML
     var textInputEl = document.querySelector("#textInput").value;
     var zipCodeEl = document.querySelector('#zipCode');
-    zipCodeEl.innerHTML = textInputEl;  // setting the zip code div element text value to the text input value that was entered in the "Enter Zip Code" input box 
+    zipCodeEl.innerHTML = textInputEl;  // setting the #zipCode text value = to the text input value that was entered in the "Enter Zip Code" input box 
 
     var apiOneRequest = apiOneUrl + textInputEl;  // this is the concatonated string that is submitted for the first api request
     localStorage.setItem("apiOneQuery", apiOneRequest);  // storing apiOneRequest into local storage
@@ -61,19 +42,19 @@ function zipQuery () {
             console.log(postCodeVar);
             document.getElementById("zipCode").textContent = postCodeVar;
 
-            var {places: { [0]: {latitude} } } = dataOneReturned;  // returns the value of the nested key {latitude}, parses it to a numeric value, assigns the value to html #latitude; after testing, parsing may or may not have been necessary but left as is since it works
-            var latVar = JSON.parse(latitude);
+            var {places: { [0]: {latitude} } } = dataOneReturned;  // returns the value of the nested key {latitude}, assigns the value to html #latitude
+            var latVar = (latitude);
             localStorage.setItem("latitude", latVar);
             //console.log(latVar);
             document.getElementById("latitude").textContent = latVar;
             
-            var {places: { [0]: {longitude} } } = dataOneReturned;  // returns the value of the nested key {longitude}, parses it to a numeric value, assigns the value to html #longitude; after testing, parsing may or may not have been necessary but left as is since it works
-            var lonVar = JSON.parse(longitude);
+            var {places: { [0]: {longitude} } } = dataOneReturned;  // returns the value of the nested key {longitude}, assigns the value to html #longitude
+            var lonVar = (longitude);
             localStorage.setItem("longitude", lonVar);
             //console.log(lonVar);
             document.getElementById("longitude").textContent = lonVar;
             
-            var {places: { [0]: {state} } } = dataOneReturned;  // returns the value of the nested key {state}, not parsed because it is NaN, assigns the value to html #state
+            var {places: { [0]: {state} } } = dataOneReturned;  // returns the value of the nested key {state}, assigns the value to html #state
             var stateVar = (state);
             localStorage.setItem("state", stateVar);
             //console.log(stateVar);
@@ -85,17 +66,19 @@ function zipQuery () {
             document.getElementById("city").textContent = cityVar;
         })
 }
-document.getElementById("submit").addEventListener("click", zipQuery);  // make click event to submit a zip code that will be used as the initial search parameter
+document.getElementById("submit").addEventListener("click", zipQuery);  // make click event to submit a zip code that will retreive city, state, latitude and longitude of our zip code
 
 
 function sunQuery () {
+    // now we take the latitude and longitude values that we received from the first api request and use those values as query parameters for the second api
     var latEl = document.getElementById("latitude").textContent;
-    var latQuery = JSON.parse(latEl);
+    var latQuery = (latEl);
     //console.log(latQuery);
     var lonEl = document.getElementById("longitude").textContent;
-    var lonQuery = JSON.parse(lonEl);
+    var lonQuery = (lonEl);
     //console.log(lonQuery);
     var apiTwoUrl = 'https://api.sunrisesunset.io/';
+    // this is the concatonated result of the second api request
     var apiTwoRequest = apiTwoUrl + "json?" + "lat=" + latQuery + "&" + "lng=" + lonQuery + "&" + "timezone=CST" + "&" + "date=today";
         localStorage.setItem("apiTwoQuery", apiTwoRequest);
         console.log(apiTwoRequest);
@@ -109,6 +92,11 @@ function sunQuery () {
             localStorage.setItem("apiTwo", JSON.stringify(dataTwoReturned));
             console.log(dataTwoReturned);
             
+            // NOTE: on var = apiTwoRequest we have decided to hard code the time zone parameter to reduce additional coding. 
+            // future improvements could be to implement a drop down box to make this selectable
+            // this variable only returns the sun rise and sun set times as values of the Central Time Zone 
+            // Example: When the sun rises at 8am in california, it would be 10am in texas. 
+            // So even if searching a california zipcode, the sun rise time would be displayed in texas time
             var {results: {timezone} } = dataTwoReturned; // returns the value of the nested key {timezone}, assigns the value to html #timezone
             var timeZoneVar = (timezone);
             localStorage.setItem("timezone", timeZoneVar);

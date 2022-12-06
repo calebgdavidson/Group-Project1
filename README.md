@@ -34,8 +34,7 @@ That input value is entered into a function that adds it to the url query to gen
 Step 3:<br>
 Next the latitude and longitude values retrieved from the Zippopotam.us API are stored into variables. These are then used to provide query parameters for the Sunrise Sunset API.
 
-![zippopotamus API parsed queried image](./assets/images/sunsetUseage.jpg)
-
+![zippopotamus API parsed queried image](./assets/images/sunsetUseage.JPG)
 
 
 ## Credits

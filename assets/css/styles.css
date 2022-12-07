@@ -28,7 +28,17 @@ body {
 #header {
     height: 20%;
     /* background-color: var(--bgcolor); */
+    
 }
+
+.titleDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+
 
 h1 {
     color: black;
@@ -290,7 +300,6 @@ a:visited {
 
 .topnav {
     display: flex;
-    padding-top: 35px;
 }
 
 #sunStatBtn {
@@ -407,4 +416,12 @@ a:visited {
     text-decoration: underline;
     color: var(--whiteText);
     margin-bottom: 10px;
+}
+.projectTitle {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 84px;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }

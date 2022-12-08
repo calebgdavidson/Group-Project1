@@ -1,28 +1,26 @@
-# Sunset Calculator
+# Two API's, One Sun
 
 ## Description
 
-We built this webpage in order to create a quick and easy way for a user to access what time the sun will be setting in their area. We realized that most people guess at what time the sun will be setting and this webpage will solve tat issue. All it takes is entering a zip code and a user will get location information and the specific time they can catch a sunset.
+We built this webpage in order to create a quick and easy way for a user to access what time the sun will be rising and setting in their area. We realized that most people guess at what time the sun will be setting and this webpage will help to solve that issue. All it takes is entering a zip code and a user will get location information, as well as specific sun events for their given location.
 
-## Table of Contents (Optional)
+## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
+- [Description](#desciption)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 - [Technologies](#technologies)
+
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+The application can be viewed and tested at URL: https://calebgdavidson.github.io/Group-Project1/
 
 ## Usage
 
 How it works:
 
 Step 1:<br>
-We begin by setting up our modal to accept an input value for any valid zip code in the united states.  Enter a zip code and press the "Submit" button.
+We begin by setting up our modal to accept an input value for any valid zip code in the United States.  Enter a zip code, and press the "Submit" button.
 
 ![zippopotamus API parsed queried image](./assets/images/zipInput.JPG)
 
@@ -61,10 +59,6 @@ The Coding Train https://www.youtube.com/watch?v=uxf0--uiX0I For technical assis
 Web Dev Tutorials https://www.youtube.com/watch?v=uUCpopjPZdI For technical assistance and walkthrough of modal building.
 
 Web Dev Simplified https://www.youtube.com/watch?v=NIq3qLaHCIs For technical assistance and walkthrough of object deconstruction.
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
 
 ## Technologies
 1). Bulma CSS styling Framework
@@ -84,26 +78,3 @@ The last section of a high-quality README file is the license. This lets other d
 4). Google Slides - used to preplan our project
     ![mockup 1 screenshot](./assets/images/mockup1.JPG)
     ![mockup 2 screenshot](./assets/images/mockup2.JPG)
-
-
-
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.

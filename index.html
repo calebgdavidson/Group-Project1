@@ -50,19 +50,21 @@
         <h1 class="projectTitle">Two API's, One Sun</h1>
         <!-- todo:<div>place holder for "by team name".....  maybe something like   by TEAM DREAM</div> -->
         <!-- nav links with technologies used for this project -->
-        <nav>
+        <nav class="navbar">
           <ul class="navbar-item flex-row">
             <li class="topnav"><a href="https://api.zippopotam.us/" target="_blank" class="column links white hover">Zippopotamus API</a></li>
             <li class="topnav"><a href="https://bulma.io/documentation/layout/tiles/" target="_blank" class="column links white hover">Bulma</a></li>
             <li class="topnav"><a href="https://sunrisesunset.io/api/" target="_blank" class="column links white hover">Sunrise Sunset API</a></li>
           </ul>
         </nav>
+
+      
       </div>
     </header>
     <!-- api data query results windows -->
-    <div id="apiResultsSection" class="flex-row">
+    <div id="apiResultsSection" class="flex-row container">
       <!-- zip code api results https://api.zippopotam.us/us/ + queried data -->
-      <div id="postal" class="flex-column">
+      <div id="postal" class="flex-column box">
         <div id="postalStatsDiv" class="zipDiv flex-column">
           <h2 class="zipResults">Zippopotam.us API RESULTS</h2>
           <ul>
@@ -75,7 +77,6 @@
             <div>
               <button id="show-modal-btn" class="myButton hover pressed white" onClick="window.location.href=window.location.href">Let's Try Another Zip code!!!</button>
             </div>
-          </ul>
         </div>
       </div>
       <!-- sun rise api results https://sunrisesunset.io/api/ + queried data -->

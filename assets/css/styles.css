@@ -302,6 +302,10 @@ a:visited {
     display: flex;
 }
 
+.navbar {
+    background: none;
+}
+
 #sunStatBtn {
     display: flex;
     justify-content: center;

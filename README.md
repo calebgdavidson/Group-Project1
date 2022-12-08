@@ -2,7 +2,7 @@
 
 ## Description
 
-We built this webpage in order to create a quick and easy way for a user to access what time the sun will be rising and setting in their area. We realized that most people guess at what time the sun will be setting and this webpage will help to solve that issue. All it takes is entering a zip code and a user will get location information, as well as specific sun events for their given location.
+We built this webpage in order to create a quick and easy way for a user to access what time the sun will be rising and setting in their area. We realized that most people guess at this task, and this webpage will help to solve that issue. All it takes is entering a zip code, and a user will get location information, as well as specific sun events for their given location.
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ That input value is entered into a function that adds it to the url query to gen
 ![zippopotamus API parsed queried image](./assets/images/zipcodeAPIusage1.jpg)
 
 Step 3:<br>
-Next the latitude and longitude values retrieved from the Zippopotam.us API are stored into variables. These are then used to provide query parameters for the Sunrise Sunset API.
+Next, the latitude and longitude values retrieved from the Zippopotam.us API are stored into variables. These are then used to provide query parameters for the Sunrise Sunset API.
 
 ![zippopotamus API parsed queried image](./assets/images/sunsetUseage.JPG)
 
@@ -61,20 +61,22 @@ Web Dev Tutorials https://www.youtube.com/watch?v=uUCpopjPZdI For technical assi
 Web Dev Simplified https://www.youtube.com/watch?v=NIq3qLaHCIs For technical assistance and walkthrough of object deconstruction.
 
 ## Technologies
-1). Bulma CSS styling Framework
+1. Bulma CSS styling Framework
     https://bulma.io/documentation/layout/tiles/
     https://www.youtube.com/watch?v=LBzZLzu2GKo
     
 ![bulma css styling framework image](./assets/images/bulma.JPG)
 
-2). Sunset and Sunrise Times API
+2. Sunset and Sunrise Times API
     https://sunrisesunset.io/api/
+
 ![sunrise API parsed queried image](./assets/images/sunsetAPI.JPG)
 
-3). Zippopotam.us Zip Code Galore! API
-    https://api.zippopotam.us/
-![zippopotamus API parsed queried image](./assets/images/zipcodeAPI.JPG)
+3. Zippopotam.us Zip Code Galore API https://api.zippopotam.us/
 
-4). Google Slides - used to preplan our project
-    ![mockup 1 screenshot](./assets/images/mockup1.JPG)
-    ![mockup 2 screenshot](./assets/images/mockup2.JPG)
+![zippopotamus API parsed queried image](./assets/images/zipcodeAPIusage1.JPG)
+
+4. Google Slides - used to preplan our project
+
+![mockup 1 screenshot](./assets/images/mockup1.JPG)
+![mockup 2 screenshot](./assets/images/mockup2.JPG)

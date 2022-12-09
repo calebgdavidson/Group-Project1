@@ -14,7 +14,7 @@ We built this webpage in order to create a quick and easy way for a user to acce
 
 ## Installation
 
-No installation steps are required. This application may be visited at ***https://calebgdavidson.github.io/Group-Project1/***
+No installation steps are required. This application may be visited at ***https://calebgdavidson.github.io/Two-APIs-One-Sun/***
 
 ## Usage
 

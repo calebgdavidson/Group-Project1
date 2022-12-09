@@ -5,15 +5,16 @@
 
 :root {
     --windowColor: rgba(0, 116, 161, 0.589);
-    --bgcolor: rgb(0, 118, 165);
+    --bgcolor: rgb(26, 131, 207);
     --border: rgb(0, 0, 0);
     --hover: rgb(255, 255, 0);
     --buttonColor: rgb(48, 48, 48);
     --whiteText: rgb(255, 255, 255);
     --closeBtn: crimson;
-    --cloudGray: rgba(128, 128, 128, 0.596);
+    --cloudGray: rgb(124, 124, 124);
     --insetBorder: silver;
     --navBackground: rgba(146, 146, 146, 0.692);
+    --navButtonSolid: rgb(144, 144, 144);
 }
 
 body {
@@ -27,8 +28,8 @@ body {
 
 #header {
     height: 20%;
-    /* background-color: var(--bgcolor); */
-    
+    background-color: var(--bgcolor);
+    border: 3px solid black; 
 }
 
 .titleDiv {
@@ -37,8 +38,6 @@ body {
     flex-direction: column;
     padding-top: 25px;
 }
-
-
 
 h1 {
     color: black;
@@ -52,7 +51,7 @@ h2 {
 }
 
 .column {
-    height: 100%;
+    padding: 6px;
 }
 
 #apiResultsSection {
@@ -69,6 +68,7 @@ h2 {
     justify-content: space-around;
     padding-left: 100px;
     padding-right: 100px;
+    border-top: 3px solid black
 }
 
 #postal, #sun {
@@ -144,16 +144,22 @@ li span:nth-child(3){
     float: right;
 }
 
+#getSun {
+    display: flex;
+    justify-content: center;
+}
+
 .myButton {
     background-color: var(--buttonColor);
     font-weight: bold;
     font-size: 16px;
     height: fit-content;
     width: fit-content;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid var(--border);
     border-radius: 30px;
     box-shadow: 1px 1px 5px 1px;
+    justify-content: center;
 }
 
 .white {
@@ -299,21 +305,19 @@ a:visited {
 }
 
 .topnav {
-    display: flex;
+    height: 30px;
 }
 
 #sunStatBtn {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .bottomNav {
     padding-top: 30px;
 }
 
-#caleb {
-    color: crimson;
+#caleb, #geneveve, #sam, #matthew, #james {
     background-color: var(--navBackground);
     margin-left: 10px;
     margin-right: 10px;
@@ -321,80 +325,32 @@ a:visited {
     border-radius: 30px;
 }
 
-#caleb:hover {
+#caleb {
+    color: crimson;
+}
+
+#geneveve {
+    color: orange;
+}
+
+#sam {
+    color: yellow;
+}
+
+#matthew {
+    color: green;
+}
+
+#james {
+    color: blue;
+}
+
+#caleb:hover, #geneveve:hover, #sam:hover, #matthew:hover, #james:hover {
     color: white;
     cursor: pointer;
     text-decoration: none;
     border: 2px solid var(--whiteText);
     box-shadow: 1px 1px 5px 1px;
-}
-
-#geneveve {
-    color: orange;
-    background-color: var(--navBackground);
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-}
-
-#geneveve:hover {
-    color: var(--whiteText);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px 1px;
-    border: 2px solid white;
-}
-
-#sam {
-    color: yellow;
-    background-color: var(--navBackground);
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-}
-
-#sam:hover {
-    color: var(--whiteText);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px 1px;
-    border: 2px solid white;
-}
-
-#matthew {
-    color: green;
-    background-color: var(--navBackground);
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-}
-
-#matthew:hover {
-    color: var(--whiteText);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px 1px;
-    border: 2px solid white;
-}
-
-#james {
-    color: blue;
-    background-color: var(--navBackground);
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-}
-
-#james:hover {
-    color: var(--whiteText);
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px 1px;
-    border: 2px solid white;
 }
 
 .pressed:active {
@@ -416,12 +372,38 @@ a:visited {
     text-decoration: underline;
     color: var(--whiteText);
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
+
 .projectTitle {
     font-family: 'Luckiest Guy', cursive;
     font-size: 84px;
-    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-image: linear-gradient(60deg, black, black, black,#E21143, #FFB03A, yellow, green, blue, black, black, black);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.navStyle {
+    color: var(--whiteText);
+    border: 3px solid black;
+    border-radius: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    background-color: var(--navButtonSolid);
+    font-size: 22px;
+}
+
+.navStyle:hover {
+    color: var(--whiteText);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 1px 1px 5px 1px;
+    border: 2px solid white;
+}
+
+.justCenter {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
